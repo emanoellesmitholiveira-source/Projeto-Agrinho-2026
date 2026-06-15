@@ -9,34 +9,55 @@
 <body>
     <header>
         <h1>Agro Forte, Futuro Sustentável</h1>
-        <p>Equilíbrio entre Produção e Meio Ambiente</p>
+        <p>Encontre o equilíbrio entre produção e meio ambiente</p>
     </header>
 
     <main class="container">
-        <section class="simulador">
-            <h2>Simulador de Práticas Sustentáveis</h2>
-            <p>Selecione as técnicas para aplicar na fazenda:</p>
+        <section class="escolhas">
+            <h2>Gerenciamento da Fazenda</h2>
+            <p>Escolha quais ações tomar na sua propriedade:</p>
             
-            <label>
-                <input type="checkbox" id="plantio" onchange="atualizarSimulador()"> Plantio Direto (Protege o solo)
-            </label>
-            <label>
-                <input type="checkbox" id="tecnologia" onchange="atualizarSimulador()"> Agricultura de Precisão/Drones (Evita desperdício)
-            </label>
-            <label>
-                <input type="checkbox" id="ilpf" onchange="atualizarSimulador()"> Integração Lavoura-Pecuária-Floresta (Sustentabilidade)
-            </label>
+            <div class="grupo-opcoes">
+                <h3>🌱 Práticas Sustentáveis</h3>
+                <label class="sustentavel">
+                    <input type="checkbox" id="plantio" onchange="atualizarSimulador()"> Plantio Direto e Rotação de Culturas
+                </label>
+                <label class="sustentavel">
+                    <input type="checkbox" id="tecnologia" onchange="atualizarSimulador()"> Agricultura de Precisão (Drones e Sensores)
+                </label>
+                <label class="sustentavel">
+                    <input type="checkbox" id="ilpf" onchange="atualizarSimulador()"> Integração Lavoura-Pecuária-Floresta (ILPF)
+                </label>
+            </div>
+
+            <div class="grupo-opcoes">
+                <h3>⚠️ Práticas de Alto Impacto Ambiental</h3>
+                <label class="predatorio">
+                    <input type="checkbox" id="desmatamento" onchange="atualizarSimulador()"> Expandir área desmatando a mata nativa
+                </label>
+                <label class="predatorio">
+                    <input type="checkbox" id="quimicos" onchange="atualizarSimulador()"> Uso excessivo de defensivos sem análise técnica
+                </label>
+                <label class="predatorio">
+                    <input type="checkbox" id="solo" onchange="atualizarSimulador()"> Uso intensivo do solo sem período de descanso
+                </label>
+            </div>
         </section>
 
         <section class="resultados">
             <h2>Status da Propriedade</h2>
+            
             <div class="barra-status">
-                <span>Produtividade: </span><strong id="prod-val">50%</strong>
+                <span>📈 Produtividade e Lucro: </span><strong id="prod-val">50%</strong>
             </div>
+            
             <div class="barra-status">
-                <span>Preservação Ambiental: </span><strong id="amb-val">50%</strong>
+                <span>🌳 Preservação Ambiental: </span><strong id="amb-val">50%</strong>
             </div>
-            <p id="mensagem">Adote práticas sustentáveis para equilibrar a balança!</p>
+
+            <div class="caixa-mensagem">
+                <p id="mensagem">A fazenda está operando no limite básico. Faça suas escolhas para ver o impacto!</p>
+            </div>
         </section>
     </main>
 
